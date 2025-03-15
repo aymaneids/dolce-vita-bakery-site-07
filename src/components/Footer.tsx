@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Facebook, Mail, Phone, MapPin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -39,6 +39,15 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a 
+                href="https://twitter.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-terracotta transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter size={20} />
+              </a>
+              <a 
                 href="mailto:hello@dolcev.com" 
                 className="text-white/70 hover:text-terracotta transition-colors"
                 aria-label="Email"
@@ -68,6 +77,9 @@ const Footer = () => {
                 <Link to="/blog" className="text-white/70 hover:text-terracotta transition-colors">Blog</Link>
               </li>
               <li>
+                <Link to="/gift-cards" className="text-white/70 hover:text-terracotta transition-colors">Gift Cards</Link>
+              </li>
+              <li>
                 <Link to="/contact" className="text-white/70 hover:text-terracotta transition-colors">Contact</Link>
               </li>
             </ul>
@@ -89,6 +101,17 @@ const Footer = () => {
                 <span>Sunday</span>
                 <span>8am - 8pm</span>
               </li>
+              <li className="mt-4 pt-4 border-t border-white/10">
+                <span className="text-terracotta">Special Holiday Hours:</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Thanksgiving</span>
+                <span>8am - 2pm</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Christmas Eve</span>
+                <span>8am - 4pm</span>
+              </li>
             </ul>
           </div>
           
@@ -98,7 +121,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex gap-3 text-white/70">
                 <MapPin size={20} className="flex-shrink-0 text-terracotta" />
-                <span>123 Bakery Street<br />Hayes Valley, San Francisco</span>
+                <span>123 Bakery Street<br />Hayes Valley, San Francisco<br />CA 94102</span>
               </li>
               <li className="flex gap-3 text-white/70">
                 <Phone size={20} className="flex-shrink-0 text-terracotta" />
@@ -112,10 +135,17 @@ const Footer = () => {
           </div>
         </div>
         
-        {/* Divider */}
+        {/* Divider & Additional Links */}
         <div className="border-t border-white/10 mt-10 pt-8">
-          <div className="text-center text-white/60 text-sm">
-            <p>&copy; {currentYear} New Paradise Dolce V Cafe Bakery & Gelato. All rights reserved.</p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-white/60 text-sm">
+              <p>&copy; {currentYear} New Paradise Dolce V Cafe Bakery & Gelato. All rights reserved.</p>
+            </div>
+            <div className="flex gap-6 text-sm text-white/60">
+              <Link to="/privacy-policy" className="hover:text-white/80 transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-white/80 transition-colors">Terms of Service</Link>
+              <Link to="/accessibility" className="hover:text-white/80 transition-colors">Accessibility</Link>
+            </div>
           </div>
         </div>
       </div>

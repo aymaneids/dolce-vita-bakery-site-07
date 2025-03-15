@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { CSSProperties } from 'react';
 
 interface FeaturedCategoryProps {
   title: string;
@@ -9,6 +10,7 @@ interface FeaturedCategoryProps {
   image: string;
   to: string;
   className?: string;
+  style?: CSSProperties;
 }
 
 const categories = [
@@ -38,7 +40,7 @@ const categories = [
   },
 ];
 
-const FeaturedCategory = ({ title, description, image, to, className }: FeaturedCategoryProps) => {
+const FeaturedCategory = ({ title, description, image, to, className, style }: FeaturedCategoryProps) => {
   return (
     <Link
       to={to}
@@ -46,6 +48,7 @@ const FeaturedCategory = ({ title, description, image, to, className }: Featured
         'group relative overflow-hidden rounded-xl aspect-square card-hover',
         className
       )}
+      style={style}
     >
       {/* Image */}
       <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" 
