@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -8,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
-import { CardCheckIcon, MailIcon, InfoIcon, CheckCircle } from 'lucide-react';
+import { CreditCard, MailIcon, InfoIcon, CheckCircle } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 import { cn } from '@/lib/utils';
 
@@ -345,7 +344,7 @@ const GiftCards = () => {
                           <div className="bg-gray-50 rounded-xl overflow-hidden">
                             <DeliveryOption 
                               id="print" 
-                              icon={CardCheckIcon}
+                              icon={CreditCard}
                               title="Print at Home" 
                               description="Get a printable version of the gift card that you can give in person." 
                             />
